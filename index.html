@@ -35,7 +35,7 @@
 					<td>
 						あなたは
 						<font color="red">
-							<i><b>151</b></i></font>番目の訪問者です！
+							<i><b id="counter"></b></i></font>番目の訪問者です！
 								キリ番の人は掲示板にカキコして下さい！素通り禁止！！
 						</font>
 					</td>
@@ -66,6 +66,15 @@
 					</p>
 
 
-			</center>	
+			</center>
+			<script>
+				const id = document.getElementById("counter")
+				window.onload = async () => {
+					const data = await fetch("https://counter.kokoa.dev/")
+					const text = await data.text()
+					id.innerText = text
+				}
+
+			</script>
 	</body>
 </html>
