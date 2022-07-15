@@ -42,7 +42,7 @@
 				</tr>
 			</table>
 			<br>
-			<a href=""><< BBS掲示板 >></a>
+			<!-- <a href=""><< BBS掲示板 <img src="koujichu.gif" alt="工事中" width="15"<font color="red">工事中</font> お絵かき掲示板を使ってね>></a> -->
 			<br>
 			<a href="https://neossearch.com/bbs" target="_blank"><< メタバースお絵かき掲示板 >></a>
 			<br>
@@ -70,6 +70,7 @@
 			<script>
 				const id = document.getElementById("counter")
 				window.onload = async () => {
+					//　え？非同期にfetch!? けしからん！！ XMLHttpRequestを使え！！
 					const data = await fetch("https://counter.kokoa.dev/")
 					const text = await data.text()
 					id.innerText = text
